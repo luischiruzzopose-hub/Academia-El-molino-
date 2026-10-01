@@ -1,16 +1,17 @@
 /* =========================================================
    ACADEMIA EL MOLINO — script.js
-   Menú móvil, header al hacer scroll, visor de imágenes y año.
+   Menú móvil, header al hacer scroll, enlace activo del menú,
+   visor de imágenes y año del footer. Sin dependencias.
    ========================================================= */
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* Año automático en el footer */
+  /* Año automático */
   var year = document.getElementById('year');
   if (year) { year.textContent = new Date().getFullYear(); }
 
-  /* Header: fondo negro al bajar */
+  /* Header: fondo al bajar */
   var header = document.getElementById('header');
-  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 40); }
+  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 30); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -28,23 +29,42 @@ document.addEventListener('DOMContentLoaded', function () {
   nav.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', function () { setMenu(false); });
   });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); toggle.focus(); }
+  });
 
-  /* Visor de imágenes (alumnos y certificados) */
+  /* Enlace activo según la sección visible */
+  if ('IntersectionObserver' in window) {
+    var links = {};
+    nav.querySelectorAll('a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && links[entry.target.id]) {
+          Object.keys(links).forEach(function (k) { links[k].classList.remove('active'); });
+          links[entry.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(links).forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec) { spy.observe(sec); }
+    });
+  }
+
+  /* Visor de imágenes: agrupa por bloque (galería, certificados, estacionamiento) */
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lbImg');
-  var group = [];
-  var index = 0;
-  var lastFocus = null;
+  var group = [], index = 0, lastFocus = null;
 
   function show(i) {
     index = (i + group.length) % group.length;
     var el = group[index];
     lbImg.src = el.getAttribute('data-full');
-    lbImg.alt = (el.querySelector('img') || {}).alt || '';
+    var img = el.querySelector('img');
+    lbImg.alt = img ? img.alt : '';
   }
   function open(items, i) {
-    group = items;
-    lastFocus = document.activeElement;
+    group = items; lastFocus = document.activeElement;
     show(i);
     lb.hidden = false;
     document.body.style.overflow = 'hidden';
@@ -55,14 +75,12 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.style.overflow = '';
     if (lastFocus) { lastFocus.focus(); }
   }
-
-  [document.querySelectorAll('.g-item'), document.querySelectorAll('.cert'), document.querySelectorAll('.park-img')].forEach(function (list) {
-    var items = Array.prototype.slice.call(list);
-    items.forEach(function (el, i) {
-      el.addEventListener('click', function () { open(items, i); });
-    });
+  ['.gallery', '.certs', '.park-points'].forEach(function (sel) {
+    var box = document.querySelector(sel);
+    if (!box) { return; }
+    var items = Array.prototype.slice.call(box.querySelectorAll('.zoom'));
+    items.forEach(function (el, i) { el.addEventListener('click', function () { open(items, i); }); });
   });
-
   document.getElementById('lbClose').addEventListener('click', close);
   document.getElementById('lbPrev').addEventListener('click', function () { show(index - 1); });
   document.getElementById('lbNext').addEventListener('click', function () { show(index + 1); });

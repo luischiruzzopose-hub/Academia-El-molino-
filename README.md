@@ -1,30 +1,31 @@
 # Academia El Molino — Sitio web
 
-Sitio estático (HTML/CSS/JS, sin dependencias ni build) de Academia El Molino, escuela de conducir de autos y motos en Maldonado y Punta del Este.
+Sitio estático (HTML, CSS y JS sin dependencias ni build) de Academia El Molino, escuela de conducir para autos y motos en Maldonado y Punta del Este.
 
 ## Estructura
 ```
-index.html       → página principal
-styles.css       → estilos (colores en las variables de :root)
-script.js        → menú móvil, header y visor de fotos
-assets/images/   → fotos optimizadas (portada, motos, alumnos, certificados)
+index.html        → página principal
+simulacro.html    → simulacro de examen teórico (30 preguntas)
+styles.css        → estilos (colores y tipografías en :root)
+script.js         → menú móvil, header, enlace activo y visor de fotos
+assets/images/    → fotos optimizadas (portada, cursos, alumnos, certificados, estacionamiento)
+assets/images/simulacro/ → señales del simulacro
+assets/video/     → video de estacionamiento entre balizas
 ```
+
+## Secciones de index.html
+Inicio · Cursos · Por qué · Clases · Estacionamiento · Precios · Promociones · Simulacro · Requisitos · Traslado · Seguridad vial · Instructor · Alumnos · Contacto.
 
 ## Cambiar datos
-- **Precios:** buscá la sección `id="precios"` en `index.html`.
-- **WhatsApp:** los enlaces usan `https://wa.me/59894547478` y `https://wa.me/59891638709`. El texto después de `?text=` es el mensaje que aparece precargado.
-- **Fotos de alumnos:** agregá la imagen en `assets/images/` y copiá un bloque `<button class="g-item">` en la sección `id="alumnos"`.
+- **Precios:** sección `id="precios"`. Si cambian, actualizá también el bloque `application/ld+json` del `<head>`.
+- **WhatsApp:** los enlaces usan `https://wa.me/59894547478` y `https://wa.me/59891638709`. El texto después de `?text=` es el mensaje precargado.
+- **Fotos de alumnos:** agregá la imagen en `assets/images/` y copiá un `<button class="g zoom">` en la sección `id="alumnos"`.
+- **Dominio:** si el sitio pasa a un dominio propio, reemplazá `https://academia1-xi.vercel.app/` en las etiquetas `canonical`, `og:` y en los datos estructurados.
 
-## Publicar gratis con GitHub Pages
+## Publicar
+Vercel o GitHub Pages sirven la carpeta tal cual (no hay build).
 ```bash
-git init
 git add .
-git commit -m "Sitio Academia El Molino"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/academia-el-molino.git
-git push -u origin main
+git commit -m "Nuevo diseño del sitio"
+git push
 ```
-Después: repositorio → **Settings** → **Pages** → rama `main`, carpeta `/ (root)`.
-El sitio queda en `https://TU-USUARIO.github.io/academia-el-molino/`.
-
-Para actualizar: `git add . && git commit -m "cambio" && git push`.
