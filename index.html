@@ -22,7 +22,8 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" type="image/svg+xml" href="assets/images/molino.svg">
-<link rel="preload" as="image" href="assets/images/portada-960.jpg" media="(max-width: 960px)">
+<link rel="preload" as="image" href="assets/images/portada-movil.jpg" media="(max-width: 640px)">
+<link rel="preload" as="image" href="assets/images/portada-960.jpg" media="(min-width: 641px) and (max-width: 960px)">
 <link rel="preload" as="image" href="assets/images/portada.jpg" media="(min-width: 961px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,6 +94,7 @@
 <!-- =================== HERO =================== -->
 <section class="hero" id="inicio">
   <picture>
+    <source media="(max-width: 640px)" srcset="assets/images/portada-movil.jpg" width="800" height="600">
     <source media="(max-width: 960px)" srcset="assets/images/portada-960.jpg">
     <img class="hero-img" src="assets/images/portada.jpg" width="1600" height="900" alt="Los autos de Academia El Molino frente a la escultura de la Mano en Punta del Este" fetchpriority="high">
   </picture>
@@ -105,7 +107,7 @@
     <ul class="hero-cats" aria-label="Cursos">
       <li>Autos</li><li>Motos G1</li><li>G2</li><li>50 cc</li>
     </ul>
-    <div class="hero-actions">
+    <div class="hero-actions" id="heroActions">
       <a class="btn btn-lime btn-lg" href="https://wa.me/59894547478?text=Hola%20Academia%20El%20Molino%2C%20quiero%20consultar%20por%20clases%20de%20manejo." target="_blank" rel="noopener">
         <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Consultar por WhatsApp
       </a>

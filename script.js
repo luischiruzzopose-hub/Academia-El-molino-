@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* Barra de WhatsApp en celular: se oculta mientras se ven los botones de la portada */
+  var heroActions = document.getElementById('heroActions');
+  if (heroActions && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      document.body.classList.toggle('hero-cta-visible', entries[0].isIntersecting);
+    }).observe(heroActions);
+  }
+
   /* Menú móvil */
   var toggle = document.getElementById('navToggle');
   var nav = document.getElementById('mainNav');
