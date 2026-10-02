@@ -127,7 +127,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .header-inner { display: flex; align-items: center; gap: 20px; height: var(--header-h); }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; margin-right: auto; }
-.brand-mark { width: 40px; height: 40px; border-radius: 10px; }
+.brand-mark { width: 44px; height: 44px; border-radius: 50%; }
 .brand-text { display: flex; flex-direction: column; font-family: var(--display); font-weight: 800; font-size: 1.5rem; line-height: .92; }
 .brand-text small { font-size: .78rem; font-weight: 600; color: var(--lime); letter-spacing: .02em; }
 .nav { display: flex; align-items: center; gap: 2px; }

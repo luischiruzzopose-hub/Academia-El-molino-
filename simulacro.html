@@ -6,7 +6,10 @@
 <title>Simulacro de examen teórico | Academia El Molino</title>
 <meta name="description" content="Practicá el examen teórico de manejo con el simulacro de Academia El Molino: 30 preguntas sobre señales, prioridades, velocidad, alcohol y más.">
 <meta name="theme-color" content="#000000">
-<link rel="icon" type="image/svg+xml" href="assets/images/molino.svg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/images/icono-192.png">
+<link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -68,7 +71,7 @@
     display:flex; justify-content:space-between; align-items:center; gap:12px;
   }
   .marca{ display:flex; align-items:center; gap:10px; color:#fff; text-decoration:none; }
-  .marca svg{ width:38px; height:38px; flex:none; }
+  .marca svg, .marca img{ width:40px; height:40px; flex:none; }
   .aspas{ transform-origin:32px 30px; animation: girar 14s linear infinite; }
   @keyframes girar{ to{ transform:rotate(360deg); } }
   .marca-texto{
@@ -239,13 +242,7 @@
 <header class="barra-superior">
   <div class="barra-in">
     <a href="index.html" class="marca" aria-label="Volver al sitio de Academia El Molino">
-      <svg viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M29.5 33h5l5 25h-15z" fill="#7BC531"/>
-        <g class="aspas" fill="#FFD60A">
-          <rect x="33" y="5" width="7" height="20" rx="1"/><rect x="33" y="5" width="7" height="20" rx="1" transform="rotate(90 32 30)"/><rect x="33" y="5" width="7" height="20" rx="1" transform="rotate(180 32 30)"/><rect x="33" y="5" width="7" height="20" rx="1" transform="rotate(270 32 30)"/>
-        </g>
-        <circle cx="32" cy="30" r="3.5" fill="#fff"/>
-      </svg>
+      <img src="assets/images/icono-96.png" alt="" width="44" height="44" style="border-radius:50%">
       <span class="marca-texto"><small>Academia</small>El Molino</span>
       <span class="volver">Volver al sitio</span>
     </a>
