@@ -59,6 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* Señales: tocar para ver el significado */
+  document.querySelectorAll('.sign').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var on = btn.classList.toggle('is-flipped');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  });
+
   /* Visor de imágenes: agrupa por bloque (galería, certificados, estacionamiento) */
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lbImg');
@@ -83,9 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.style.overflow = '';
     if (lastFocus) { lastFocus.focus(); }
   }
-  ['.gallery', '.certs', '.park-points'].forEach(function (sel) {
-    var box = document.querySelector(sel);
-    if (!box) { return; }
+  document.querySelectorAll('.gallery, .certs, .park-points').forEach(function (box) {
     var items = Array.prototype.slice.call(box.querySelectorAll('.zoom'));
     items.forEach(function (el, i) { el.addEventListener('click', function () { open(items, i); }); });
   });

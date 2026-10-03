@@ -29,3 +29,6 @@ git add .
 git commit -m "Nuevo diseño del sitio"
 git push
 ```
+
+## Reseñas de Google
+La sección `id="resenas"` enlaza a la ficha de Google Maps. Para mostrar reseñas en la página, hay un bloque comentado dentro de esa sección: copiá una tarjeta por reseña con el texto y el nombre tal cual aparecen en Google.

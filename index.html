@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Academia El Molino | Escuela de conducir en Maldonado y Punta del Este</title>
-<meta name="description" content="Academia El Molino: clases de conducir para autos y motos G1, G2 y 50 cc en Maldonado y Punta del Este. Preparación teórica y práctica para tu licencia.">
+<meta name="description" content="Academia El Molino: clases de conducir para autos y motos G1 y G2 en Maldonado y Punta del Este. Preparación teórica y práctica para tu licencia.">
 <link rel="canonical" href="https://academia1-xi.vercel.app/">
 <meta name="theme-color" content="#000000">
 
@@ -13,21 +13,20 @@
 <meta property="og:locale" content="es_UY">
 <meta property="og:site_name" content="Academia El Molino">
 <meta property="og:title" content="Academia El Molino | Escuela de conducir en Maldonado y Punta del Este">
-<meta property="og:description" content="Clases de conducir para autos y motos G1, G2 y 50 cc en Maldonado y Punta del Este. Preparación teórica y práctica para tu licencia.">
+<meta property="og:description" content="Clases de conducir para autos y motos G1 y G2 en Maldonado y Punta del Este. Preparación teórica y práctica para tu licencia.">
 <meta property="og:url" content="https://academia1-xi.vercel.app/">
-<meta property="og:image" content="https://academia1-xi.vercel.app/assets/images/portada.jpg">
-<meta property="og:image:width" content="1600">
-<meta property="og:image:height" content="900">
-<meta property="og:image:alt" content="Los autos de Academia El Molino frente a la escultura de la Mano en Punta del Este">
+<meta property="og:image" content="https://academia1-xi.vercel.app/assets/images/portada-flyer.jpg">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="931">
+<meta property="og:image:alt" content="Autos y motos de Academia El Molino frente a La Mano de Punta del Este">
 <meta name="twitter:card" content="summary_large_image">
 
+<link rel="preload" as="image" href="assets/images/portada-flyer-720.jpg" media="(max-width: 760px)">
+<link rel="preload" as="image" href="assets/images/portada-flyer.jpg" media="(min-width: 761px)">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icono-192.png">
 <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/images/portada-movil.jpg" media="(max-width: 640px)">
-<link rel="preload" as="image" href="assets/images/portada-960.jpg" media="(min-width: 641px) and (max-width: 960px)">
-<link rel="preload" as="image" href="assets/images/portada.jpg" media="(min-width: 961px)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -39,16 +38,24 @@
   "@context": "https://schema.org",
   "@type": "DrivingSchool",
   "name": "Academia El Molino",
-  "description": "Escuela de conducir para autos y motos (G1, G2 y 50 cc) en Maldonado y Punta del Este. Preparación teórica y práctica para la licencia.",
+  "description": "Escuela de conducir para autos y motos (G1 y G2) en Maldonado y Punta del Este. Preparación teórica y práctica para la licencia.",
   "url": "https://academia1-xi.vercel.app/",
-  "image": "https://academia1-xi.vercel.app/assets/images/portada.jpg",
+  "image": "https://academia1-xi.vercel.app/assets/images/portada-flyer.jpg",
   "logo": "https://academia1-xi.vercel.app/assets/images/icono-512.png",
   "telephone": ["+598 94 547 478", "+598 91 638 709"],
   "areaServed": [
     { "@type": "City", "name": "Maldonado" },
     { "@type": "City", "name": "Punta del Este" }
   ],
-  "employee": { "@type": "Person", "name": "Fernando Ojeda", "jobTitle": "Instructor de conducción" },
+  "employee": [
+    { "@type": "Person", "name": "Carlos Ojeda", "jobTitle": "Instructor de conducción" },
+    { "@type": "Person", "name": "Fernando Ojeda", "jobTitle": "Instructor de conducción" }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/academiaelmolino",
+    "https://www.instagram.com/academiaelmolino/",
+    "https://www.tiktok.com/@academiaelmolino"
+  ],
   "makesOffer": [
     { "@type": "Offer", "name": "Clase de conducción", "price": "1200", "priceCurrency": "UYU" },
     { "@type": "Offer", "name": "Examen", "price": "2000", "priceCurrency": "UYU" },
@@ -96,25 +103,27 @@
 
 <!-- =================== HERO =================== -->
 <section class="hero" id="inicio">
-  <picture>
-    <source media="(max-width: 640px)" srcset="assets/images/portada-movil.jpg" width="800" height="600">
-    <source media="(max-width: 960px)" srcset="assets/images/portada-960.jpg">
-    <img class="hero-img" src="assets/images/portada.jpg" width="1600" height="900" alt="Los autos de Academia El Molino frente a la escultura de la Mano en Punta del Este" fetchpriority="high">
-  </picture>
-  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-media">
+      <picture>
+        <source media="(max-width: 760px)" srcset="assets/images/portada-flyer-720.jpg">
+        <img class="hero-img" src="assets/images/portada-flyer.jpg" width="1080" height="931" alt="Autos y motos de Academia El Molino frente a La Mano de Punta del Este" fetchpriority="high">
+      </picture>
+    </div>
 
-  <div class="wrap hero-content">
-    <p class="hero-kicker">Escuela de conducir en Maldonado y Punta del Este</p>
-    <h1 class="hero-title"><span>Academia</span> El Molino</h1>
-    <p class="hero-sub">Aprendé a manejar con confianza, práctica y seguridad.</p>
-    <ul class="hero-cats" aria-label="Cursos">
-      <li>Autos</li><li>Motos G1</li><li>G2</li><li>50 cc</li>
-    </ul>
-    <div class="hero-actions" id="heroActions">
-      <a class="btn btn-lime btn-lg" href="https://wa.me/59894547478?text=Hola%20Academia%20El%20Molino%2C%20quiero%20consultar%20por%20clases%20de%20manejo." target="_blank" rel="noopener">
-        <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Consultar por WhatsApp
-      </a>
-      <a class="btn btn-outline-light btn-lg" href="#cursos">Ver cursos</a>
+    <div class="hero-content">
+      <p class="hero-kicker">Escuela de conducir en Maldonado y Punta del Este</p>
+      <h1 class="hero-title"><span>Academia</span> El Molino</h1>
+      <p class="hero-sub">Aprendé a manejar de forma segura y responsable.</p>
+      <ul class="hero-cats" aria-label="Cursos">
+        <li>Autos</li><li>Moto G1 (50 cc)</li><li>Moto G2</li>
+      </ul>
+      <div class="hero-actions" id="heroActions">
+        <a class="btn btn-lime btn-lg" href="https://wa.me/59894547478?text=Hola%20Academia%20El%20Molino%2C%20quiero%20consultar%20por%20clases%20de%20manejo." target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Consultar por WhatsApp
+        </a>
+        <a class="btn btn-outline-light btn-lg" href="#cursos">Ver cursos</a>
+      </div>
     </div>
   </div>
 
@@ -166,9 +175,9 @@
         </div>
         <div class="course-body">
           <h3>Licencia de moto</h3>
-          <p class="course-lead">Categorías G1 y G2, y también Moto 50 cc.</p>
+          <p class="course-lead">Categorías G1 (moto 50 cc) y G2.</p>
           <ul class="cats" aria-label="Categorías de moto">
-            <li>G1</li><li>G2</li><li>50 cc</li>
+            <li>G1 <small>Moto 50</small></li><li>G2</li>
           </ul>
           <ul class="ticks">
             <li>Clases prácticas</li>
@@ -204,8 +213,8 @@
       </article>
       <article class="why-card">
         <svg aria-hidden="true"><use href="#i-user"/></svg>
-        <h3>Instructor a tu lado</h3>
-        <p>Las clases las da Fernando Ojeda, con formación como instructor de escuelas de conducir.</p>
+        <h3>Instructores a tu lado</h3>
+        <p>Carlos y Fernando Ojeda, con formación profesional como instructores. Carlos tiene más de 10 años en el rubro.</p>
       </article>
       <article class="why-card">
         <svg aria-hidden="true"><use href="#i-book"/></svg>
@@ -388,6 +397,70 @@
   </div>
 </section>
 
+<!-- =================== SEÑALES =================== -->
+<section class="signs" id="senales" aria-labelledby="senales-titulo">
+  <div class="wrap">
+    <div class="signs-head">
+      <h2 class="signs-title" id="senales-titulo">Señales que tenés que conocer</h2>
+      <p>Tocá cada señal para ver qué significa. Todas aparecen en el simulacro.</p>
+    </div>
+
+    <div class="signs-group">
+      <h3 class="signs-label"><span class="dot-reg" aria-hidden="true"></span>Reglamentarias</h3>
+      <ul class="signs-row">
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Pare. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/pare.jpg" width="240" height="240" loading="lazy" alt="Señal Pare"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Pare</strong><span>Detención total y obligatoria antes de continuar la marcha.</span></span>
+          </button></li>
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Ceda el paso. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/ceda-el-paso.jpg" width="240" height="240" loading="lazy" alt="Señal Ceda el paso"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Ceda el paso</strong><span>Ceder el paso a los vehículos que circulan por la vía a la que se ingresa.</span></span>
+          </button></li>
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Prohibido estacionar. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/no-estacionar.jpg" width="240" height="240" loading="lazy" alt="Señal Prohibido estacionar"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Prohibido estacionar</strong><span>No se puede estacionar en ese lugar.</span></span>
+          </button></li>
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Doble mano. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/doble-mano.jpg" width="240" height="240" loading="lazy" alt="Señal Doble mano"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Doble mano</strong><span>Doble sentido de circulación.</span></span>
+          </button></li>
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Ancho máximo. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/ancho-maximo.jpg" width="240" height="240" loading="lazy" alt="Señal Ancho máximo"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Ancho máximo</strong><span>Ancho máximo permitido para circular.</span></span>
+          </button></li>
+      </ul>
+    </div>
+
+    <div class="signs-group">
+      <h3 class="signs-label"><span class="dot-pre" aria-hidden="true"></span>Preventivas</h3>
+      <ul class="signs-row">
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Curva a la izquierda. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/curva-izquierda.jpg" width="240" height="240" loading="lazy" alt="Señal Curva a la izquierda"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Curva a la izquierda</strong><span>Próxima curva a la izquierda.</span></span>
+          </button></li>
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Curva a la derecha. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/curva-derecha.jpg" width="240" height="240" loading="lazy" alt="Señal Curva a la derecha"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Curva a la derecha</strong><span>Curva pronunciada a la derecha.</span></span>
+          </button></li>
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Paso a nivel. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/paso-a-nivel.jpg" width="240" height="240" loading="lazy" alt="Señal Paso a nivel"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Paso a nivel</strong><span>Paso a nivel con barreras.</span></span>
+          </button></li>
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Calzada resbaladiza. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/calzada-resbaladiza.jpg" width="240" height="240" loading="lazy" alt="Señal Calzada resbaladiza"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Calzada resbaladiza</strong><span>La calzada puede estar resbaladiza.</span></span>
+          </button></li>
+          <li><button class="sign" type="button" aria-pressed="false" aria-label="Señal: Cruce peatonal. Tocá para ver qué significa">
+            <span class="sign-front"><img src="assets/images/senales/cruce-peatonal.jpg" width="240" height="240" loading="lazy" alt="Señal Cruce peatonal"><span class="sign-q">¿Qué significa?</span></span>
+            <span class="sign-back"><strong>Cruce peatonal</strong><span>Proximidad de un cruce peatonal.</span></span>
+          </button></li>
+      </ul>
+    </div>
+
+    <a class="btn btn-lime btn-lg signs-btn" href="simulacro.html">Ponete a prueba en el simulacro</a>
+  </div>
+</section>
+
 <!-- =================== REQUISITOS =================== -->
 <section class="section reqs" id="requisitos">
   <div class="wrap reqs-grid">
@@ -514,29 +587,55 @@
   </div>
 </section>
 
-<!-- =================== INSTRUCTOR =================== -->
+<!-- =================== INSTRUCTORES =================== -->
 <section class="section instructor" id="formacion">
-  <div class="wrap instr-grid">
-    <div class="instr-text">
-      <p class="instr-kicker">Conocé a tu instructor</p>
-      <h2 class="instr-name">Fernando Ojeda</h2>
-      <p class="instr-lead">Fernando cuenta con formación profesional como instructor de escuelas de conducir y participa en actividades de educación y seguridad vial.</p>
-      <ul class="instr-list">
-        <li>Curso Teórico y Práctico de Formación Profesional de Instructores de Escuelas de Conducir (ANDIPEC, 2023).</li>
-        <li>XVII Encuentro Iberoamericano de Educación Vial (Montevideo, 2025).</li>
-        <li>Formación y actualización en seguridad vial.</li>
-      </ul>
-    </div>
+  <div class="wrap">
+    <header class="sec-head sec-head-dark">
+      <p class="instr-kicker">Conocé a tus instructores</p>
+      <h2 class="h2">Formación profesional al volante</h2>
+    </header>
 
-    <div class="certs">
-      <button class="cert zoom" data-full="assets/images/certificado-andipec.jpg" aria-label="Ampliar certificado de Formación Profesional de Instructores">
-        <img src="assets/images/certificado-andipec.jpg" width="686" height="454" loading="lazy" alt="Certificado de asistencia al curso de Formación Profesional de Instructores de Escuelas de Conducir">
-        <span>Formación profesional de instructores</span>
-      </button>
-      <button class="cert zoom" data-full="assets/images/certificado-iberoamericano.jpg" aria-label="Ampliar certificado del Encuentro Iberoamericano de Educación Vial">
-        <img src="assets/images/certificado-iberoamericano.jpg" width="1000" height="750" loading="lazy" alt="Certificado de asistencia al XVII Encuentro Iberoamericano de Educación Vial">
-        <span>XVII Encuentro Iberoamericano de Educación Vial</span>
-      </button>
+    <div class="instr-grid">
+      <article class="instr-card">
+        <div class="instr-top">
+          <h3 class="instr-name">Carlos Ojeda</h3>
+          <p class="instr-badge"><strong>+10</strong> años en el rubro</p>
+        </div>
+        <p class="instr-lead">Más de 10 años en el rubro y formación profesional como instructor de escuelas de conducir.</p>
+        <ul class="instr-list">
+          <li>Curso Teórico y Práctico de Formación Profesional de Instructores de Escuelas de Conducir (ANDIPEC, 2023).</li>
+        </ul>
+        <div class="certs certs-one">
+          <button class="cert zoom" data-full="assets/images/certificado-carlos.jpg" aria-label="Ampliar certificado de Carlos Ojeda">
+            <img src="assets/images/certificado-carlos.jpg" width="1080" height="810" loading="lazy" alt="Certificado de Carlos Ojeda del curso de Formación Profesional de Instructores de Escuelas de Conducir">
+            <span>Formación profesional de instructores</span>
+          </button>
+        </div>
+        <a class="instr-wa" href="https://wa.me/59894547478?text=Hola%20Carlos%2C%20quiero%20consultar%20por%20clases%20de%20manejo." target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> 094 547 478
+        </a>
+      </article>
+
+      <article class="instr-card">
+        <div class="instr-top">
+          <h3 class="instr-name">Fernando Ojeda</h3>
+        </div>
+        <p class="instr-lead">Formación profesional como instructor de escuelas de conducir y participación en actividades de educación y seguridad vial.</p>
+        <ul class="instr-list">
+          <li>Curso Teórico y Práctico de Formación Profesional de Instructores de Escuelas de Conducir (ANDIPEC, 2023).</li>
+          <li>XVII Encuentro Iberoamericano de Educación Vial (Montevideo, 2025).</li>
+        </ul>
+        <div class="certs">
+          <button class="cert zoom" data-full="assets/images/certificado-andipec.jpg" aria-label="Ampliar certificado de Formación Profesional de Instructores de Fernando Ojeda">
+            <img src="assets/images/certificado-andipec.jpg" width="686" height="454" loading="lazy" alt="Certificado de Fernando Ojeda del curso de Formación Profesional de Instructores de Escuelas de Conducir">
+            <span>Formación profesional de instructores</span>
+          </button>
+          <button class="cert zoom" data-full="assets/images/certificado-iberoamericano.jpg" aria-label="Ampliar certificado del Encuentro Iberoamericano de Educación Vial">
+            <img src="assets/images/certificado-iberoamericano.jpg" width="1000" height="750" loading="lazy" alt="Certificado de asistencia al XVII Encuentro Iberoamericano de Educación Vial">
+            <span>Encuentro Iberoamericano de Educación Vial</span>
+          </button>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -561,6 +660,33 @@
   </div>
 </section>
 
+<!-- =================== RESEÑAS =================== -->
+<section class="section reviews" id="resenas">
+  <div class="wrap">
+    <div class="reviews-box">
+      <div class="reviews-text">
+        <p class="reviews-g" aria-hidden="true"><span>G</span>Reseñas en Google</p>
+        <h2 class="h2">Lo que dicen nuestros alumnos</h2>
+        <p>Leé las opiniones de quienes ya aprendieron con nosotros en Google Maps. Si hiciste el curso, tu reseña nos ayuda muchísimo.</p>
+      </div>
+      <div class="reviews-actions">
+        <a class="btn btn-black btn-lg" href="https://www.google.com/maps/place/Academia+el+Molino+Maldonado/@-34.9149957,-54.9689795,15.88z/data=!4m8!3m7!1s0x95751187e75bade7:0xdf44c0f4e1f1a980!8m2!3d-34.9145085!4d-54.9643595!9m1!1b1!16s%2Fg%2F11ygxz2021?entry=ttu&amp;g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ver reseñas en Google</a>
+        <a class="btn btn-outline-dark btn-lg" href="https://www.google.com/maps/place/Academia+el+Molino+Maldonado/@-34.9149957,-54.9689795,15.88z/data=!4m8!3m7!1s0x95751187e75bade7:0xdf44c0f4e1f1a980!8m2!3d-34.9145085!4d-54.9643595!9m1!1b1!16s%2Fg%2F11ygxz2021?entry=ttu&amp;g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Dejar mi reseña</a>
+      </div>
+    </div>
+    <!--
+      Para mostrar reseñas acá, copiá este bloque por cada una con el texto y el nombre tal cual aparecen en Google:
+      <div class="review-grid">
+        <figure class="review">
+          <p class="review-stars" aria-label="5 de 5 estrellas">★★★★★</p>
+          <blockquote>Texto de la reseña.</blockquote>
+          <figcaption>Nombre de usuario</figcaption>
+        </figure>
+      </div>
+    -->
+  </div>
+</section>
+
 <!-- =================== CONTACTO =================== -->
 <section class="contact" id="contacto">
   <div class="wrap contact-grid">
@@ -572,11 +698,16 @@
         <li><svg aria-hidden="true"><use href="#i-pin"/></svg>Punta del Este</li>
       </ul>
       <p class="contact-small">Si estás dentro de Maldonado o Punta del Este, te pasamos a buscar.</p>
+      <ul class="social" aria-label="Redes sociales">
+        <li><a href="https://www.facebook.com/academiaelmolino" target="_blank" rel="noopener" aria-label="Facebook de Academia El Molino"><svg aria-hidden="true"><use href="#i-fb"/></svg><span>Facebook</span></a></li>
+        <li><a href="https://www.instagram.com/academiaelmolino/" target="_blank" rel="noopener" aria-label="Instagram de Academia El Molino"><svg aria-hidden="true"><use href="#i-ig"/></svg><span>Instagram</span></a></li>
+        <li><a href="https://www.tiktok.com/@academiaelmolino" target="_blank" rel="noopener" aria-label="TikTok de Academia El Molino"><svg aria-hidden="true"><use href="#i-tt"/></svg><span>TikTok</span></a></li>
+      </ul>
     </div>
     <div class="phones">
       <a class="phone" href="https://wa.me/59894547478?text=Hola%20Academia%20El%20Molino%2C%20quiero%20consultar%20por%20clases%20de%20manejo." target="_blank" rel="noopener">
         <svg class="phone-ico" aria-hidden="true"><use href="#i-wa"/></svg>
-        <span class="phone-num">094 547 478</span>
+        <span class="phone-num">094 547 478 <small>Carlos</small></span>
         <span class="phone-cta">Abrir chat</span>
       </a>
       <a class="phone" href="https://wa.me/59891638709?text=Hola%20Academia%20El%20Molino%2C%20quiero%20consultar%20por%20clases%20de%20manejo." target="_blank" rel="noopener">
@@ -595,12 +726,18 @@
     <div>
       <p class="footer-brand">Academia El Molino</p>
       <p>Escuela de conducir para autos y motos en Maldonado y Punta del Este.</p>
+      <ul class="social social-sm" aria-label="Redes sociales">
+        <li><a href="https://www.facebook.com/academiaelmolino" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-fb"/></svg></a></li>
+        <li><a href="https://www.instagram.com/academiaelmolino/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+        <li><a href="https://www.tiktok.com/@academiaelmolino" target="_blank" rel="noopener" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tt"/></svg></a></li>
+      </ul>
     </div>
     <nav class="footer-nav" aria-label="Enlaces del pie">
       <a href="#cursos">Cursos</a>
       <a href="#precios">Precios</a>
       <a href="#requisitos">Requisitos</a>
       <a href="simulacro.html">Simulacro</a>
+      <a href="#resenas">Reseñas</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <p class="footer-small">© <span id="year">2026</span> Academia El Molino</p>
@@ -644,6 +781,9 @@
     <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
     <symbol id="i-id" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.5 16c.5-1.5 1.6-2.2 3-2.2s2.5.7 3 2.2M14.5 10h4M14.5 13.5h3"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3h-3.1v12.2a2.7 2.7 0 1 1-2.7-2.7c.3 0 .5 0 .8.1V9.4a5.9 5.9 0 1 0 5 5.8V9.1a7.6 7.6 0 0 0 4.4 1.4V7.4a4.4 4.4 0 0 1-4.4-4.4Z"/></symbol>
   </defs>
 </svg>
 
