@@ -1,0 +1,25 @@
+LC STUDIO — Página web
+
+CONTENIDO
+- index.html   → la página completa (estilos, animaciones y logo ya incluidos)
+- assets/      → tu logo original en alta calidad
+- capturas/    → opcional: capturas de tus proyectos (ver LEEME dentro)
+
+SUBIRLA A VERCEL
+Opción A (la más simple):
+1. Entrá a vercel.com y creá un proyecto nuevo.
+2. Arrastrá esta carpeta descomprimida.
+3. Listo: Vercel te da el link.
+
+Opción B (con GitHub):
+1. Subí el contenido de esta carpeta a un repositorio.
+2. En Vercel: Add New → Project → elegí el repositorio → Deploy.
+
+EDITAR TUS DATOS
+Abrí index.html y buscá "EDITÁ ACÁ TUS DATOS".
+Ahí están el WhatsApp, el mensaje automático, Instagram y el correo.
+Más abajo está la lista PROJECTS para agregar, quitar o cambiar proyectos.
+
+PROBARLA EN TU COMPUTADORA
+Hacé doble clic en index.html. Necesitás internet para que carguen
+las fuentes y las animaciones.

@@ -1,0 +1,8 @@
+Carpeta opcional para capturas de tus proyectos.
+
+1. Sacá una captura de cada sitio (idealmente 1280 x 800, en formato .webp o .jpg).
+2. Guardala acá, por ejemplo: puma.webp
+3. En index.html, buscá el proyecto en la lista PROJECTS y agregale:
+   img:"capturas/puma.webp"
+
+Con capturas, la página carga más rápido y las tarjetas se ven también en el celular.
